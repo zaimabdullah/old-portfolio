@@ -402,12 +402,8 @@ footer p{
     }
 
     .sec-icon-lang{
-    	margin: 20px auto;
+    	margin: 60px;
     }	
-
-    .sec-icon-lang i{
-    	margin: 0 50px;
-    }
 
     /*-----social media-----*/
     /*.social-media{
