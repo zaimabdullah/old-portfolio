@@ -357,7 +357,7 @@ footer p{
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px), (orientation: landscape) {
     /*-----profile-----*/
     .profile img{
     	max-width: 50%;
