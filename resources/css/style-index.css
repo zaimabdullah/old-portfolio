@@ -325,11 +325,17 @@ input[type=checkbox]:checked ~ #menu{
 	margin-bottom: 30px;
 }
 
-.contact p{
+.contact a{
+	text-decoration: none;
 	text-transform: lowercase;
+	color: var(--black);
 	font-size: 21px;
 	font-style: italic;
 }
+
+.contact a:hover{
+	font-weight: 1000;
+}	
 
 .contact .line {
 	margin-top: 10px;
