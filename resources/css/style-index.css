@@ -37,6 +37,10 @@ h1, h2, a{
 	text-transform: capitalize;
 }
 
+h2{
+	margin-top: 10px;
+}
+
 .line{
 	width: 150px;
 	border: 2px solid #757575;
@@ -153,7 +157,7 @@ input[type=checkbox]:checked ~ #menu{
 
 .about-me h2 {
 	grid-area: title;
-	grid-column: span 3;
+	grid-column: 1 / -1;
 	text-align: center;
 	margin-bottom: 10px;
 }
@@ -185,22 +189,25 @@ input[type=checkbox]:checked ~ #menu{
 .language h2{
 	grid-column: 1 / -1; /*span all column*/
 	text-align: center;
-	margin-bottom: 30px;
+	margin-bottom: 40px;
 }
 
-.sec-icon-lang{
-    font-size: 50px;
+.icon-lang{
+	font-size: 50px;
     padding: 30px;
     border-radius: 100%;
-    margin: 0 125px;
     border: 3px solid inherit;
     transition: background-color 0.5s, color 0.5s;
     cursor: pointer;
 }
 
-.sec-icon-lang:hover{
+.icon-lang:hover{
 	background-color: #E60000;
 	color: white;
+}
+
+.sec-icon-lang{
+	margin-bottom: 60px;
 }
 /*-----end of language-----*/
 
@@ -223,6 +230,7 @@ input[type=checkbox]:checked ~ #menu{
 .logo{
 	font-size: 70px;
 	border: 1px solid inherit;
+	transition: background-color 0.5s, color 0.5s;
 	padding: 20px;
 	border-radius: 100%;
 	margin-bottom: 30px;
@@ -233,14 +241,26 @@ input[type=checkbox]:checked ~ #menu{
     background-color: #555;
 }
 
+.logo-git:hover{
+	background-color: #000000;
+}
+
 .logo-ig{
 	color: #fff;
     background-color: #D62B7F;
 }
 
+.logo-ig:hover{
+	background-color: #FF2688;
+}
+
 .logo-twit{
 	color: #fff;
     background-color: #22A7F0;
+}
+
+.logo-twit:hover{
+	background-color: #45E3FF;
 }
 /*-----end of social media-----*/
 
@@ -261,14 +281,14 @@ input[type=checkbox]:checked ~ #menu{
 
 .project h2 {
 	grid-area: title;
-	grid-column: span 3;
+	grid-column: 1 / -1;
 	text-align: center;
 	margin-bottom: 10px;
 }
 
 .laptop2{
 	grid-area: laptop2;
-	width: 50%;
+	max-width: 100%;
 }
 
 .project-desc{
@@ -302,7 +322,7 @@ input[type=checkbox]:checked ~ #menu{
 }
 
 .contact h2{
-	margin: 30px auto;
+	margin-bottom: 30px;
 }
 
 .contact p{
@@ -399,7 +419,7 @@ footer p{
     }
 
     .logo{
-	font-size: 50px;    
+    	font-size: 50px;
     	margin: 0 60px;
     }
 
@@ -425,5 +445,5 @@ footer p{
     /*-----footer-----*/
     footer p{
 	    font-size: 16px;
-    }
+	}   
 }
