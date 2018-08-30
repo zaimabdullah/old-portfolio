@@ -1,0 +1,427 @@
+/*Start with some variable for color*/
+:root{
+	--black: #303030;
+	--blue: #7E89E6;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	/* border-box box model allows us to add padding and border to our elements without increasing their size */
+	box-sizing: border-box;
+	/* A system font stack so things load nice and quick! */
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+	color: var(--black);
+}
+
+/*
+  WAT IS THIS?!
+  We inherit box-sizing: border-box; from our <html> selector
+  Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+*/
+*,
+*:before,
+*:after{
+	box-sizing: inherit;
+}
+
+body{
+	background: linear-gradient(-70deg, #FF8C57, #A3FFD7);
+}
+
+h1, h2, a{
+	text-transform: capitalize;
+}
+
+.line{
+	width: 150px;
+	border: 2px solid #757575;
+	margin: 0 auto;
+}
+
+img{
+	max-width: 100%;
+}
+
+.about-me,
+.language,
+.social-media,
+.project,
+.contact{
+	background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+	margin: 30px 40px;
+}
+
+/*-----header-----*/
+header{
+	background: linear-gradient(to right ,rgba(46, 217, 255, 0.794), rgba(255, 216, 133, 0.794)), url('img/bg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+/*-----navigation-----*/
+.menu{
+	display: block;
+	width: 100%;
+	background-color: #CCCCCC;
+	padding-left: 5%;
+}
+
+.menu ul{
+	list-style-type: none;
+}
+
+.menu li{
+    line-break: none;
+    display: inline-block;
+}
+
+.menu a{
+	text-decoration: none;
+    color: var(--black);
+    padding: 20px ;
+    display: inline-block;
+    text-transform: capitalize;
+    border-bottom: 4px solid #CCCCCC;
+    transition: border-bottom 0.4s;
+}
+
+.menu a:hover{
+	border-bottom: 4px solid #f7f7f7;
+}
+
+/*Style 'show menu' label button and hide it by default*/
+.show-menu {
+    text-decoration: none;
+    color: white;
+    background: #19c589;
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+    display: none;
+}
+
+.show-menu:hover{
+	background: #00C200;
+}
+
+/*Hide checkbox*/
+input[type=checkbox]{
+    display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+/*-----end of navbar-----*/
+
+/*-----profile-----*/
+.profile{
+	text-align: center;
+	padding: 20px;
+}
+
+.profile img{
+	width: 300px;
+	border-radius: 100%;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+/*-----end of profile-----*/
+
+/*-----end of header-----*/
+.about-me{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-areas: 
+		"title title title"
+		"laptop laptop about-desc"
+		"laptop laptop about-desc";
+	align-items: center;
+	justify-items:  center;
+	font-weight: 100;	
+}
+
+.about-me h2 {
+	grid-area: title;
+	grid-column: span 3;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.laptop{
+	grid-area: laptop;
+	width: 50%;
+}
+
+.about-desc{
+	grid-area: about-desc;
+}
+
+.about-desc p{
+	font-size: 26px;
+}
+/*-----end of about me-----*/
+
+/*-----language-----*/
+.language{
+	display: grid;
+	grid-template-columns: repeat(
+		3, minmax(200px, 1fr));
+	grid-gap: 10px;
+	align-items: center;
+	justify-items: center; 
+}
+
+.language h2{
+	grid-column: span 3;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.sec-icon-lang{
+	font-size: 50px;
+    padding: 30px;
+    border-radius: 100%;
+    margin: 0 125px;
+    border: 3px solid inherit;
+    transition: background-color 0.5s, color 0.5s;
+    cursor: pointer;
+}
+
+.sec-icon-lang:hover{
+	background-color: #E60000;
+	color: white;
+}
+/*-----end of language-----*/
+
+/*-----soacial media-----*/
+.social-media{
+	display: grid;
+	grid-template-columns: repeat(
+		3, minmax(200px, 1fr));
+	grid-gap: 10px;
+	align-items: center;
+	justify-items: center; 
+}
+
+.social-media h2{
+	grid-column: span 3;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.logo{
+	font-size: 70px;
+	border: 1px solid inherit;
+	padding: 20px;
+	border-radius: 100%;
+	margin-bottom: 30px;
+}
+
+.logo-git{
+	color: #fff;
+    background-color: #555;
+}
+
+.logo-ig{
+	color: #fff;
+    background-color: #D62B7F;
+}
+
+.logo-twit{
+	color: #fff;
+    background-color: #22A7F0;
+}
+/*-----end of social media-----*/
+
+
+/*-----project-----*/
+.project{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-areas: 
+		"title title title"
+		"project-desc project-desc laptop2"
+		"project-desc project-desc laptop2"
+		"button button laptop2";
+	align-items: center;
+	justify-items:  center;
+	font-weight: 100;	
+}
+
+.project h2 {
+	grid-area: title;
+	grid-column: span 3;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.laptop2{
+	grid-area: laptop2;
+	width: 50%;
+}
+
+.project-desc{
+	grid-area: project-desc;
+}
+
+.project-desc p{
+	font-size: 26px;
+	text-align: center;
+}
+
+.project a{
+	grid-area: button;
+	text-decoration: none;
+	background-color: var(--blue);
+	color: white;
+	text-align: center;
+	padding: 15px 20px;
+}
+
+.project a:hover{
+	background-color: #577C91;
+}
+/*-----end of project-----*/
+
+
+/*-----contact-----*/
+.contact{
+	display: block;
+	text-align: center;
+}
+
+.contact h2{
+	margin: 30px auto;
+}
+
+.contact p{
+	text-transform: lowercase;
+	font-size: 21px;
+	font-style: italic;
+}
+
+.contact .line {
+	margin-top: 10px;
+	width: 250px;
+}
+/*-----end of contact-----*/
+
+/*-------footer----------------*/
+footer{
+    width: 100%;
+    height: 50px;
+    background-color: #555;
+}
+footer p{
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+    padding-top: 10px;
+    color: #ccc;
+}
+/*------------------end of footer-----------*/
+
+/*====================*/
+/*-----media query-----*/
+@media only screen and (max-width: 480px) {
+	/*-----navbar-----*/
+	.menu{
+		position: static;
+		display: none;
+	}
+
+	.menu li{
+		margin-bottom: 1px;
+	}
+
+	.menu ul,
+	.menu li, 
+	.menu a{
+		width: 100%;
+	}
+
+	/*Display 'show menu' link*/
+    .show-menu {
+        display:block;
+    }
+
+    /*-----profile-----*/
+    .profile img{
+    	max-width: 50%;
+    }
+
+    /*----about me-----*/
+    .about-me{
+    	display: grid;
+    	grid-template-areas: 
+    		"title title"
+    		"laptop laptop"
+    		"about-desc about-desc";
+    }
+
+    .about-me p,
+    .project p{
+    	font-size: 21px;
+    }
+
+    /*-----language-----*/
+    .language,
+    .social-media{
+    	display: block;
+    }
+
+    .sec-icon-lang{
+    	margin: 20px auto;
+    }	
+
+    .sec-icon-lang i{
+    	margin: 0 50px;
+    }
+
+    /*-----social media-----*/
+    /*.social-media{
+    	display: block;
+    }*/
+
+    .sec-icon-social{
+    	margin: 20px auto;
+    }
+
+    .logo{
+    	margin: 0 60px;
+    }
+
+    /*-----project-----*/
+    .project{
+    	display: grid;
+    	grid-template-areas: 
+    		"title title"
+    		"laptop2 laptop2"
+    		"project-desc project-desc"
+    		"button button";
+    }
+
+    /*-----contact-----*/
+    .contact p{
+    	font-size: 18px;
+    }
+
+    .contact .line {
+    	width: 90%;
+    }
+
+    /*-----footer-----*/
+    footer p{
+	    font-size: 16px;
+}
