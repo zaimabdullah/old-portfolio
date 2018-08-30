@@ -176,20 +176,20 @@ input[type=checkbox]:checked ~ #menu{
 .language{
 	display: grid;
 	grid-template-columns: repeat(
-		3, minmax(200px, 1fr));
+		auto-fit, minmax(400px, 1fr));
 	grid-gap: 10px;
 	align-items: center;
 	justify-items: center; 
 }
 
 .language h2{
-	grid-column: span 3;
+	grid-column: 1 / -1; /*span all column*/
 	text-align: center;
 	margin-bottom: 30px;
 }
 
 .sec-icon-lang{
-	font-size: 50px;
+    font-size: 50px;
     padding: 30px;
     border-radius: 100%;
     margin: 0 125px;
@@ -208,14 +208,14 @@ input[type=checkbox]:checked ~ #menu{
 .social-media{
 	display: grid;
 	grid-template-columns: repeat(
-		3, minmax(200px, 1fr));
+		auto-fit, minmax(300px, 1fr));
 	grid-gap: 10px;
 	align-items: center;
 	justify-items: center; 
 }
 
 .social-media h2{
-	grid-column: span 3;
+	grid-column: 1 / -1; /*span all column*/
 	text-align: center;
 	margin-bottom: 50px;
 }
