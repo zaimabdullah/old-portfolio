@@ -346,14 +346,14 @@ input[type=checkbox]:checked ~ #menu{
 /*-------footer----------------*/
 footer{
     width: 100%;
-    height: 50px;
+    height: 60px;
     background-color: #555;
 }
 footer p{
     text-align: center;
     font-weight: 300;
     font-size: 20px;
-    padding-top: 10px;
+    padding-top: 15px;
     color: #ccc;
 }
 /*------------------end of footer-----------*/
