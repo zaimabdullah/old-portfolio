@@ -1,0 +1,200 @@
+/*Start with some variable for color*/
+:root{
+	--black: #303030;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+	color: #fff;
+}
+
+*,
+*:before,
+*:after{
+	box-sizing: inherit;
+}
+
+body{
+	background: var(--black);
+}
+
+section{
+	width: 100%;
+	height: 80vh;
+
+}
+
+section.sec1{
+	position: relative;
+	overflow: hidden;
+	background: url(img/city.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+section.sec1:before{
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: -50%;
+	width: 100%;
+	height: 50%;
+	background: var(--black);
+	transform-origin: right;
+	transform: skewY(8deg);
+}
+
+section.sec1:after{
+	content: '';
+	position: absolute;
+	top: 100%;
+	right: -50%;
+	width: 100%;
+	height: 50%;
+	background: var(--black);
+	transform-origin: left;
+	transform: skewY(-8deg);
+}
+
+.title{
+	position: absolute;
+	width: 100%;
+	top: 35%;
+	left: 45%;
+}
+
+section.sec3{
+	position: relative;
+	overflow: hidden;
+	background: url(img/bicycle.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: left;
+}
+
+section.sec3:before{
+	content: '';
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	width: 100%;
+	height: 50%;
+	background: var(--black);
+	transform-origin: left;
+	transform: skewY(4deg);
+}
+
+section.sec2{
+	height: auto;
+	padding: 20px;
+}
+
+.project{
+	background: linear-gradient(-70deg, #3c6382, #636e72);
+	border-radius: 10%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+	margin: 30px 40px;
+	display: grid;
+	grid-template-areas: 
+		"pic about-project";
+	grid-gap: 20px;
+	align-items: center;
+	justify-items: center;
+}
+
+img{
+	grid-area: pic;
+	max-width: 100%;
+	border-radius: 20%;
+}
+
+.about-project{
+	grid-area: about-project;
+	width: 70%;
+}
+
+.about-project h2{
+	margin-bottom: 5%;
+}
+
+.about-project p{
+	font-size: 18px;
+	line-height: 1.4;
+}
+
+.btn{
+	margin-top: 5%;
+	margin-right: 10%;
+	display: inline-block;
+	height: 30px;
+	width: 150px;
+	line-height: 30px;
+	overflow: hidden;
+	text-align: center;
+	background: #e74c3c;
+	border-radius: 25px;
+	color: #fff;
+	text-transform: uppercase;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.btn-text{
+	display: block;
+	height: 100%;
+	position: relative;
+	top: 0;
+	transition: top 0.6s;
+	width: 100%;
+}
+
+.btn:hover .btn-text{
+	top: -100%;
+}
+
+footer{
+	position: absolute;
+	width: 100%;
+	bottom: 20%;
+	left: 40%;
+	font-size: 21px;
+	font-weight: 120;
+}
+@media only screen and (max-width: 480px) {
+	.title{
+		left: 35%;
+	}
+
+	.project{
+		grid-template-areas: 
+			"pic"
+			"about-project";
+	}
+
+	.about-project{
+		text-align: center;
+	}
+
+	.about-project h2{
+		margin-bottom: 10%;
+	}
+
+	.btn{
+		margin-top: 5%;
+	}
+
+	footer{
+		left: 20%;
+	}
+}
