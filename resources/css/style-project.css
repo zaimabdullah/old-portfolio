@@ -65,6 +65,27 @@ section.sec1:after{
 	transform: skewY(-8deg);
 }
 
+.back-btn{
+	height: 30px;
+	width: 70px;
+	display: inline-block;
+	text-align: center;
+	background: #e74c3c;
+	border-radius: 25px;
+	color: #fff;
+	text-transform: uppercase;
+	cursor: pointer;
+	text-decoration: none;
+	position: absolute;
+	top: 5%;
+	left: 3%;
+	padding-top: 5px;
+}
+
+.back-btn:hover{
+	background: #f1c40f;
+}
+
 .title{
 	position: absolute;
 	width: 100%;
